@@ -1,5 +1,7 @@
 package binarytree;
 
+import org.junit.Test;
+
 /**
  * @author pulil
  * @version V1.0
@@ -66,12 +68,13 @@ public class Q1137_constructStringFromBinaryTree {
         return result;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         TreeNode t1 = new TreeNode(1);
         t1.left = new TreeNode(2);
         t1.right = new TreeNode(3);
         t1.left.left = new TreeNode(4);
-        System.out.println(new Q1137_constructStringFromBinaryTree().tree2str(t1));
+        System.out.println(tree2str(t1));
 
     }
 

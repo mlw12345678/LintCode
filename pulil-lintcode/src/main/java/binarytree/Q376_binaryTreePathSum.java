@@ -1,5 +1,7 @@
 package binarytree;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -73,13 +75,14 @@ public class Q376_binaryTreePathSum {
         return result;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.left.right = new TreeNode(5);
         root.left.left = new TreeNode(4);
         root.right = new TreeNode(3);
-        List<List<Integer>> result = new Q376_binaryTreePathSum().binaryTreePathSum(root,7);
+        List<List<Integer>> result = binaryTreePathSum(root,7);
         System.out.println(result.toString());
     }
 }

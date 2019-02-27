@@ -1,5 +1,7 @@
 package binarytree;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -56,11 +58,12 @@ public class Q67_binaryTreeInorderTraversal {
         return resultList;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-        List<Integer> result = new Q67_binaryTreeInorderTraversal().inorderTraversal(root);
+        List<Integer> result = inorderTraversal(root);
         System.out.println(result.toString());
     }
 }

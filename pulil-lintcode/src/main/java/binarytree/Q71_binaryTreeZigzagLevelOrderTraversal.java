@@ -1,5 +1,7 @@
 package binarytree;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -75,13 +77,14 @@ public class Q71_binaryTreeZigzagLevelOrderTraversal {
         return result;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.left.right = new TreeNode(5);
         root.left.left = new TreeNode(4);
         root.right = new TreeNode(3);
-        List<List<Integer>> result = new Q71_binaryTreeZigzagLevelOrderTraversal().zigzagLevelOrder(root);
+        List<List<Integer>> result = zigzagLevelOrder(root);
         System.out.println(result.toString());
     }
 }

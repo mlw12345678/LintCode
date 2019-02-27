@@ -1,5 +1,7 @@
 package binarytree;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -76,13 +78,14 @@ public class Q70_binaryTreeLevelOrderTraversal2 {
         return result;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(9);
         root.right = new TreeNode(20);
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
-        List<List<Integer>> result = new Q70_binaryTreeLevelOrderTraversal2().levelOrder(root);
+        List<List<Integer>> result = levelOrder(root);
         System.out.println(result.toString());
     }
 }

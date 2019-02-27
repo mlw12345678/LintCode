@@ -1,5 +1,6 @@
 package binarytree;
 
+import org.junit.Test;
 import sun.applet.Main;
 
 import java.util.*;
@@ -76,13 +77,14 @@ public class Q480_binaryTreePaths {
         return result;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.left.right = new TreeNode(5);
         root.left.left = new TreeNode(4);
         root.right = new TreeNode(3);
-        List<String> result = new Q480_binaryTreePaths().binaryTreePaths(root);
+        List<String> result = binaryTreePaths(root);
         System.out.println(result.toString());
     }
 }

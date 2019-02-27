@@ -1,9 +1,8 @@
 package binarytree;
 
-import javax.xml.soap.Node;
-import java.util.ArrayList;
+import org.junit.Test;
+
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
@@ -79,12 +78,13 @@ public class Q1181_diameterOfBinaryTree {
         return Math.max(leftHeight,rightHeight) + 1;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         TreeNode t = new TreeNode(1);
         t.left = new TreeNode(2);
         t.right = new TreeNode(3);
         t.left.left = new TreeNode(4);
         t.left.right = new TreeNode(5);
-        System.out.println(new Q1181_diameterOfBinaryTree().diameterOfBinaryTree(t));
+        System.out.println(diameterOfBinaryTree(t));
     }
 }
